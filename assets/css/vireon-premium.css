@@ -149,10 +149,12 @@
   /* ---------- image load-up (shimmer skeleton -> blur/scale/fade reveal) ---------- */
   .img-reveal{ overflow:hidden; --img-op:1; }
   .img-reveal:not(.loaded){ background:linear-gradient(100deg, var(--glass-fill) 15%, var(--line-strong) 40%, var(--glass-fill) 65%); background-size:220% 100%; animation:vShimmer 1.6s ease-in-out infinite; }
-  .img-reveal img{ opacity:0; transform:scale(1.12); filter:blur(18px) saturate(1.15); transition:opacity 1s cubic-bezier(.16,1,.3,1), transform 1.2s cubic-bezier(.16,1,.3,1), filter 1s ease; }
+  .img-reveal img{ opacity:0; transform:scale(1.06); filter:blur(8px); transition:opacity .4s ease-out, transform .45s cubic-bezier(.16,1,.3,1), filter .35s ease-out; }
   .img-reveal.loaded{ animation:none; background:none; }
-  .img-reveal.loaded img{ opacity:var(--img-op); transform:scale(1); filter:blur(0) saturate(1); }
-  .img-reveal.loaded:hover img{ transform:scale(1.045); }
+  .img-reveal.loaded img{ opacity:var(--img-op); transform:scale(1); filter:blur(0); }
+  .img-reveal.loaded:hover img{ transform:scale(1.045); transition-duration:.35s; }
+  /* the hero image is the first thing visible on the page - just a quick fade, no blur/scale delay */
+  .hero-bg.img-reveal img{ transition:opacity .15s linear; transform:none; filter:none; }
 
   @media (prefers-reduced-motion: reduce){
     .reveal, .reveal-left, .reveal-right{ opacity:1; transform:none; transition:none; }
