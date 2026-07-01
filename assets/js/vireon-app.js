@@ -25,7 +25,7 @@
     });
 
     // ---- reveal on scroll (with safety fallback so content is never stuck hidden) ----
-    var revealEls = document.querySelectorAll('.reveal');
+    var revealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
     var revealed = false;
     function revealAll() {
       if (revealed) return;
@@ -47,6 +47,22 @@
     // belt-and-suspenders: guarantee everything is visible shortly after load
     // even if the observer never fires (older/unusual browsers, JS quirks, etc.)
     setTimeout(revealAll, 1200);
+
+    // ---- image load-up animation: shimmer skeleton until each image finishes loading ----
+    var imgWraps = document.querySelectorAll('.img-reveal');
+    each(imgWraps, function (wrap) {
+      var img = wrap.querySelector('img');
+      if (!img) return;
+      function markLoaded() { wrap.classList.add('loaded'); }
+      if (img.complete && img.naturalWidth > 0) {
+        markLoaded();
+      } else {
+        img.addEventListener('load', markLoaded);
+        img.addEventListener('error', markLoaded);
+      }
+    });
+    // belt-and-suspenders: never leave an image stuck in its shimmer state
+    setTimeout(function () { each(imgWraps, function (wrap) { wrap.classList.add('loaded'); }); }, 2500);
 
     // ---- faq single-open accordion ----
     each(document.querySelectorAll('.faq-item'), function (d) {
