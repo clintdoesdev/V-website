@@ -29,9 +29,9 @@ robots.txt, sitemap.xml (with image sitemap entries), manifest.webmanifest, brow
 ## Before you deploy
 
 1. **Domain** — every page's canonical/OG/JSON-LD URLs and the `CNAME` file use the placeholder
-   `vireonwebsite.com`. If that isn't the real domain, find-and-replace `vireonwebsite.com` across
+   `vireonwebsite.com.ng`. If that isn't the real domain, find-and-replace `vireonwebsite.com.ng` across
    all `.html`, `.xml`, `.txt`, and `CNAME` with the actual domain.
-2. **Support email** — `support@vireonwebsite.com` appears in the Organization schema and footer;
+2. **Support email** — `support@vireonwebsite.com.ng` appears in the Organization schema and footer;
    update if different.
 3. **Forms** — `register.html` and `signup.html` are front-end only (no backend wired up yet).
    Point the `<form>` actions / add JS at your real registration API.
