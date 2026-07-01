@@ -24,19 +24,36 @@
       btn.addEventListener('click', function () { applyTheme(btn.getAttribute('data-theme')); });
     });
 
+    // ---- image load-up: every image in a revealed block appears together, not one-by-one ----
+    var imgWraps = document.querySelectorAll('.img-reveal');
+    function loadImagesWithin(el) {
+      each(imgWraps, function (wrap) {
+        if (wrap === el || el.contains(wrap)) wrap.classList.add('loaded');
+      });
+    }
+    // images with no scroll-reveal ancestor (e.g. the hero) appear immediately, in sync with the hero entrance
+    each(imgWraps, function (wrap) {
+      var gated = wrap.closest ? wrap.closest('.reveal, .reveal-left, .reveal-right') : null;
+      if (!gated) wrap.classList.add('loaded');
+    });
+
     // ---- reveal on scroll (with safety fallback so content is never stuck hidden) ----
     var revealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
     var revealed = false;
     function revealAll() {
       if (revealed) return;
       revealed = true;
-      each(revealEls, function (el) { el.classList.add('visible'); });
+      each(revealEls, function (el) { el.classList.add('visible'); loadImagesWithin(el); });
     }
     if ('IntersectionObserver' in window) {
       try {
         var io = new IntersectionObserver(function (entries) {
           each(entries, function (e) {
-            if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
+            if (e.isIntersecting) {
+              e.target.classList.add('visible');
+              loadImagesWithin(e.target);
+              io.unobserve(e.target);
+            }
           });
         }, { threshold: 0.12 });
         each(revealEls, function (el) { io.observe(el); });
@@ -47,22 +64,6 @@
     // belt-and-suspenders: guarantee everything is visible shortly after load
     // even if the observer never fires (older/unusual browsers, JS quirks, etc.)
     setTimeout(revealAll, 1200);
-
-    // ---- image load-up animation: shimmer skeleton until each image finishes loading ----
-    var imgWraps = document.querySelectorAll('.img-reveal');
-    each(imgWraps, function (wrap) {
-      var img = wrap.querySelector('img');
-      if (!img) return;
-      function markLoaded() { wrap.classList.add('loaded'); }
-      if (img.complete && img.naturalWidth > 0) {
-        markLoaded();
-      } else {
-        img.addEventListener('load', markLoaded);
-        img.addEventListener('error', markLoaded);
-      }
-    });
-    // belt-and-suspenders: never leave an image stuck in its shimmer state
-    setTimeout(function () { each(imgWraps, function (wrap) { wrap.classList.add('loaded'); }); }, 2500);
 
     // ---- faq single-open accordion ----
     each(document.querySelectorAll('.faq-item'), function (d) {
