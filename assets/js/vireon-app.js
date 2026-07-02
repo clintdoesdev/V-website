@@ -76,6 +76,21 @@
       });
     });
 
+    // ---- registration form -> Telegram handoff ----
+    var regForm = document.getElementById('regForm');
+    if (regForm) {
+      regForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+        if (regForm.checkValidity && !regForm.checkValidity()) {
+          regForm.reportValidity();
+          return;
+        }
+        var submitBtn = regForm.querySelector('.form-submit');
+        if (submitBtn) { submitBtn.textContent = 'Redirecting to Telegram...'; submitBtn.setAttribute('disabled', 'disabled'); }
+        window.location.href = 'https://t.me/m/VGV7OU3LM2Zk';
+      });
+    }
+
     // ---- mobile nav drawer ----
     var menuBtn = document.querySelector('.menu-btn');
     var mobileNav = document.querySelector('.mobile-nav');
