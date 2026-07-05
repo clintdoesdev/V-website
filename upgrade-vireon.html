@@ -88,10 +88,14 @@
     {
       "@type": "WebSite",
       "@id": "https://vireonwebsite.com.ng/#website",
-      "name": "Vireon",
-      "alternateName": "Vireon Platform",
+      "name": "Vireon Website",
+      "alternateName": [
+        "Vireon",
+        "Vireon Platform",
+        "Official Vireon Website"
+      ],
       "url": "https://vireonwebsite.com.ng/",
-      "description": "Vireon connects you to surveys, remote gigs, social monetization, and financial tools from one international earning platform.",
+      "description": "The Vireon website connects you to surveys, remote gigs, social monetization, and financial tools from one international earning platform.",
       "publisher": {
         "@id": "https://vireonwebsite.com.ng/#organization"
       },
@@ -101,6 +105,26 @@
         "target": "https://vireonwebsite.com.ng/?s={search_term_string}",
         "query-input": "required name=search_term_string"
       }
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "@id": "https://vireonwebsite.com.ng/#sitenav",
+      "name": [
+        "About",
+        "Ways to earn",
+        "Premiere",
+        "How to register",
+        "Is Vireon legit?",
+        "FAQ"
+      ],
+      "url": [
+        "https://vireonwebsite.com.ng/#about",
+        "https://vireonwebsite.com.ng/#earn",
+        "https://vireonwebsite.com.ng/#premiere",
+        "https://vireonwebsite.com.ng/how-to-register.html",
+        "https://vireonwebsite.com.ng/vireon-platform.html",
+        "https://vireonwebsite.com.ng/#faq"
+      ]
     },
     {
       "@type": "WebPage",
@@ -135,42 +159,17 @@
       ]
     },
     {
-      "@type": "FAQPage",
-      "@id": "https://vireonwebsite.com.ng/upgrade-vireon.html#faq",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "How much is Vireon Premiere?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Vireon Premiere is a one-time payment of ₦14,500. There are no recurring monthly charges."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What do I get with Vireon Premiere?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Unlimited daily survey and task submissions, 24-hour priority withdrawals, a 2x earnings multiplier on CallCash and Streak Reward, access to exclusive higher-paying surveys, dedicated support, and a verified Premiere badge."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Is Vireon Premiere the only package?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. Vireon Premiere is the single registration package on the Vireon website — there are no other tiers to choose between."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Is Vireon Premiere a subscription?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "No, it's a one-time registration fee, not a recurring subscription."
-          }
-        }
-      ]
+      "@type": "Offer",
+      "@id": "https://vireonwebsite.com.ng/upgrade-vireon.html#offer",
+      "name": "Vireon Premiere",
+      "url": "https://vireonwebsite.com.ng/upgrade-vireon.html",
+      "priceCurrency": "NGN",
+      "price": 14500,
+      "availability": "https://schema.org/InStock",
+      "description": "One-time Vireon Premiere package price.",
+      "seller": {
+        "@id": "https://vireonwebsite.com.ng/#organization"
+      }
     }
   ]
 }
