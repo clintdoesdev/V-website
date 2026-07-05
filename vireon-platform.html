@@ -88,10 +88,14 @@
     {
       "@type": "WebSite",
       "@id": "https://vireonwebsite.com.ng/#website",
-      "name": "Vireon",
-      "alternateName": "Vireon Platform",
+      "name": "Vireon Website",
+      "alternateName": [
+        "Vireon",
+        "Vireon Platform",
+        "Official Vireon Website"
+      ],
       "url": "https://vireonwebsite.com.ng/",
-      "description": "Vireon connects you to surveys, remote gigs, social monetization, and financial tools from one international earning platform.",
+      "description": "The Vireon website connects you to surveys, remote gigs, social monetization, and financial tools from one international earning platform.",
       "publisher": {
         "@id": "https://vireonwebsite.com.ng/#organization"
       },
@@ -101,6 +105,26 @@
         "target": "https://vireonwebsite.com.ng/?s={search_term_string}",
         "query-input": "required name=search_term_string"
       }
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "@id": "https://vireonwebsite.com.ng/#sitenav",
+      "name": [
+        "About",
+        "Ways to earn",
+        "Premiere",
+        "How to register",
+        "Is Vireon legit?",
+        "FAQ"
+      ],
+      "url": [
+        "https://vireonwebsite.com.ng/#about",
+        "https://vireonwebsite.com.ng/#earn",
+        "https://vireonwebsite.com.ng/#premiere",
+        "https://vireonwebsite.com.ng/how-to-register.html",
+        "https://vireonwebsite.com.ng/vireon-platform.html",
+        "https://vireonwebsite.com.ng/#faq"
+      ]
     },
     {
       "@type": "WebPage",
@@ -135,50 +159,17 @@
       ]
     },
     {
-      "@type": "FAQPage",
-      "@id": "https://vireonwebsite.com.ng/vireon-platform.html#faq",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Is Vireon legit?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Vireon is a real digital platform with an official website at vireonwebsite.com.ng. As with any earning platform, only register and pay through the official domain and never share your password with anyone."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is the official Vireon website?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "The official Vireon website is vireonwebsite.com.ng. Always check the URL in your browser's address bar before entering personal or payment information."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Why does Vireon charge a registration fee?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "The one-time registration fee activates your account and unlocks Vireon's earning features. This is a standard part of Vireon's onboarding process."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How can I tell if a Vireon link is official?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Official Vireon links always point to vireonwebsite.com.ng. Be cautious of shortened links, unofficial WhatsApp groups, or messages asking you to pay outside the official checkout."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What should I do if something feels off?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Stop before you pay. Re-verify the domain, review the official registration and payments pages, and avoid sharing your password, OTP codes, or card PIN with anyone."
-          }
-        }
-      ]
+      "@type": "Offer",
+      "@id": "https://vireonwebsite.com.ng/vireon-platform.html#offer",
+      "name": "Vireon Premiere",
+      "url": "https://vireonwebsite.com.ng/vireon-platform.html",
+      "priceCurrency": "NGN",
+      "price": 14500,
+      "availability": "https://schema.org/InStock",
+      "description": "One-time Vireon Premiere registration, the only package on the official Vireon platform.",
+      "seller": {
+        "@id": "https://vireonwebsite.com.ng/#organization"
+      }
     }
   ]
 }

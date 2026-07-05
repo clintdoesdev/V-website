@@ -88,10 +88,14 @@
     {
       "@type": "WebSite",
       "@id": "https://vireonwebsite.com.ng/#website",
-      "name": "Vireon",
-      "alternateName": "Vireon Platform",
+      "name": "Vireon Website",
+      "alternateName": [
+        "Vireon",
+        "Vireon Platform",
+        "Official Vireon Website"
+      ],
       "url": "https://vireonwebsite.com.ng/",
-      "description": "Vireon connects you to surveys, remote gigs, social monetization, and financial tools from one international earning platform.",
+      "description": "The Vireon website connects you to surveys, remote gigs, social monetization, and financial tools from one international earning platform.",
       "publisher": {
         "@id": "https://vireonwebsite.com.ng/#organization"
       },
@@ -101,6 +105,26 @@
         "target": "https://vireonwebsite.com.ng/?s={search_term_string}",
         "query-input": "required name=search_term_string"
       }
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "@id": "https://vireonwebsite.com.ng/#sitenav",
+      "name": [
+        "About",
+        "Ways to earn",
+        "Premiere",
+        "How to register",
+        "Is Vireon legit?",
+        "FAQ"
+      ],
+      "url": [
+        "https://vireonwebsite.com.ng/#about",
+        "https://vireonwebsite.com.ng/#earn",
+        "https://vireonwebsite.com.ng/#premiere",
+        "https://vireonwebsite.com.ng/how-to-register.html",
+        "https://vireonwebsite.com.ng/vireon-platform.html",
+        "https://vireonwebsite.com.ng/#faq"
+      ]
     },
     {
       "@type": "WebPage",
@@ -135,42 +159,17 @@
       ]
     },
     {
-      "@type": "FAQPage",
-      "@id": "https://vireonwebsite.com.ng/payments.html#faq",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "How much does Vireon Premiere cost?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Vireon Premiere — the only registration package — is ₦14,500. At checkout the total comes to ₦15,000, since a ₦500 processing charge is added to cover payment charges."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What payment methods does Vireon accept?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Vireon accepts bank transfer and debit card payments through its official checkout on vireonwebsite.com.ng."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How do withdrawals work?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Earnings from each feature accumulate in your Vireon balance. Once you reach a feature's withdrawal threshold, you can request a payout from your dashboard."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Is it safe to pay on Vireon?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Only pay through the official checkout on vireonwebsite.com.ng. Vireon does not accept payment through unofficial agents or third-party links."
-          }
-        }
-      ]
+      "@type": "Offer",
+      "@id": "https://vireonwebsite.com.ng/payments.html#offer",
+      "name": "Vireon Premiere",
+      "url": "https://vireonwebsite.com.ng/payments.html",
+      "priceCurrency": "NGN",
+      "price": 15000,
+      "availability": "https://schema.org/InStock",
+      "description": "Vireon Premiere checkout total (package price ₦14,500 plus a ₦500 payment processing charge).",
+      "seller": {
+        "@id": "https://vireonwebsite.com.ng/#organization"
+      }
     }
   ]
 }

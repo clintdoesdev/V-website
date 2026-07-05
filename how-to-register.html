@@ -89,10 +89,14 @@
     {
       "@type": "WebSite",
       "@id": "https://vireonwebsite.com.ng/#website",
-      "name": "Vireon",
-      "alternateName": "Vireon Platform",
+      "name": "Vireon Website",
+      "alternateName": [
+        "Vireon",
+        "Vireon Platform",
+        "Official Vireon Website"
+      ],
       "url": "https://vireonwebsite.com.ng/",
-      "description": "Vireon connects you to surveys, remote gigs, social monetization, and financial tools from one international earning platform.",
+      "description": "The Vireon website connects you to surveys, remote gigs, social monetization, and financial tools from one international earning platform.",
       "publisher": {
         "@id": "https://vireonwebsite.com.ng/#organization"
       },
@@ -102,6 +106,26 @@
         "target": "https://vireonwebsite.com.ng/?s={search_term_string}",
         "query-input": "required name=search_term_string"
       }
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "@id": "https://vireonwebsite.com.ng/#sitenav",
+      "name": [
+        "About",
+        "Ways to earn",
+        "Premiere",
+        "How to register",
+        "Is Vireon legit?",
+        "FAQ"
+      ],
+      "url": [
+        "https://vireonwebsite.com.ng/#about",
+        "https://vireonwebsite.com.ng/#earn",
+        "https://vireonwebsite.com.ng/#premiere",
+        "https://vireonwebsite.com.ng/how-to-register.html",
+        "https://vireonwebsite.com.ng/vireon-platform.html",
+        "https://vireonwebsite.com.ng/#faq"
+      ]
     },
     {
       "@type": "WebPage",
@@ -134,6 +158,19 @@
           "item": "https://vireonwebsite.com.ng/how-to-register.html"
         }
       ]
+    },
+    {
+      "@type": "Offer",
+      "@id": "https://vireonwebsite.com.ng/how-to-register.html#offer",
+      "name": "Vireon Premiere",
+      "url": "https://vireonwebsite.com.ng/how-to-register.html",
+      "priceCurrency": "NGN",
+      "price": 14500,
+      "availability": "https://schema.org/InStock",
+      "description": "One-time Vireon Premiere registration fee covered in this registration guide.",
+      "seller": {
+        "@id": "https://vireonwebsite.com.ng/#organization"
+      }
     },
     {
       "@type": "HowTo",
@@ -171,13 +208,13 @@
           "@type": "HowToStep",
           "position": 5,
           "name": "Review the Vireon Premiere price",
-          "text": "Vireon has one package — Vireon Premiere, ₦14,500 one-time — which unlocks every earning feature with no separate tiers."
+          "text": "Vireon has one package — Vireon Premiere, ₦14,500 one-time — which unlocks every earning feature. There are no separate tiers to choose between."
         },
         {
           "@type": "HowToStep",
           "position": 6,
-          "name": "Complete the one-time activation fee",
-          "text": "Vireon isn't free to join — a one-time registration fee activates your account. Follow the official payment instructions shown on screen and keep your proof of payment."
+          "name": "Complete the one-time registration fee",
+          "text": "Vireon isn't free to join — the one-time Vireon Premiere fee activates your account. Follow the official payment instructions shown on screen and keep your proof of payment."
         },
         {
           "@type": "HowToStep",
@@ -190,44 +227,6 @@
           "position": 8,
           "name": "Set up your withdrawal details",
           "text": "Add your payout information in your dashboard so you can withdraw once you reach a feature's payout threshold."
-        }
-      ]
-    },
-    {
-      "@type": "FAQPage",
-      "@id": "https://vireonwebsite.com.ng/how-to-register.html#faq",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Do I need to pay to register on Vireon?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. Vireon has one package — Vireon Premiere — priced at a one-time ₦14,500. This single registration activates your account and unlocks every earning feature."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What does Vireon Premiere include?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Vireon Premiere (₦14,500 one-time) includes unlimited daily submissions, 24-hour priority payouts, a 2x multiplier on CallCash and Streak Reward, and access to exclusive surveys — it's the only package on Vireon, so every member gets full access."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How soon can I start earning after registering?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Most users can start on features like Vireon Survey or Streak Reward immediately after activation is confirmed."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Is my information safe when I register?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Vireon handles registration data and payments through secure, encrypted channels and does not share your details with third parties without consent."
-          }
         }
       ]
     }

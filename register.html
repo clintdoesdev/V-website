@@ -88,10 +88,14 @@
     {
       "@type": "WebSite",
       "@id": "https://vireonwebsite.com.ng/#website",
-      "name": "Vireon",
-      "alternateName": "Vireon Platform",
+      "name": "Vireon Website",
+      "alternateName": [
+        "Vireon",
+        "Vireon Platform",
+        "Official Vireon Website"
+      ],
       "url": "https://vireonwebsite.com.ng/",
-      "description": "Vireon connects you to surveys, remote gigs, social monetization, and financial tools from one international earning platform.",
+      "description": "The Vireon website connects you to surveys, remote gigs, social monetization, and financial tools from one international earning platform.",
       "publisher": {
         "@id": "https://vireonwebsite.com.ng/#organization"
       },
@@ -101,6 +105,26 @@
         "target": "https://vireonwebsite.com.ng/?s={search_term_string}",
         "query-input": "required name=search_term_string"
       }
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "@id": "https://vireonwebsite.com.ng/#sitenav",
+      "name": [
+        "About",
+        "Ways to earn",
+        "Premiere",
+        "How to register",
+        "Is Vireon legit?",
+        "FAQ"
+      ],
+      "url": [
+        "https://vireonwebsite.com.ng/#about",
+        "https://vireonwebsite.com.ng/#earn",
+        "https://vireonwebsite.com.ng/#premiere",
+        "https://vireonwebsite.com.ng/how-to-register.html",
+        "https://vireonwebsite.com.ng/vireon-platform.html",
+        "https://vireonwebsite.com.ng/#faq"
+      ]
     },
     {
       "@type": "WebPage",
@@ -135,34 +159,17 @@
       ]
     },
     {
-      "@type": "FAQPage",
-      "@id": "https://vireonwebsite.com.ng/register.html#faq",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Is registration free on Vireon?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "No. Vireon has one package — Vireon Premiere — priced at a one-time ₦14,500. This single registration unlocks every earning feature on the Vireon website, with no separate tiers."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What do I need to register?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "You need your full name, a valid phone number, an email address, and a password. Have your preferred payment method ready to complete activation."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How long does activation take?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Activation is usually instant once your one-time registration fee is confirmed. You can start using Vireon Survey, Converse, and other features right after."
-          }
-        }
-      ]
+      "@type": "Offer",
+      "@id": "https://vireonwebsite.com.ng/register.html#offer",
+      "name": "Vireon Premiere",
+      "url": "https://vireonwebsite.com.ng/register.html",
+      "priceCurrency": "NGN",
+      "price": 14500,
+      "availability": "https://schema.org/InStock",
+      "description": "One-time Vireon Premiere registration, unlocking every earning feature with no limits.",
+      "seller": {
+        "@id": "https://vireonwebsite.com.ng/#organization"
+      }
     }
   ]
 }
