@@ -114,8 +114,6 @@ a{color:inherit;text-decoration:none;}
 .main-btn:active{transform:translateY(0);opacity:.95;}
 .main-btn .arrow{font-size:1rem;transition:transform .2s;}
 .main-btn:hover .arrow{transform:translateX(2px);}
-.secondary-btn{display:flex;align-items:center;justify-content:center;gap:7px;width:100%;margin-top:9px;padding:13px 20px;border-radius:14px;border:1px solid rgba(45,217,210,.25);background:rgba(45,217,210,.04);color:#fff;cursor:pointer;font-family:'Poppins',sans-serif;font-size:.82rem;font-weight:700;backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);transition:background .2s,border-color .2s;-webkit-tap-highlight-color:transparent;text-decoration:none;}
-.secondary-btn:hover{background:rgba(45,217,210,.08);border-color:rgba(45,217,210,.45);}
 
 /* bank note */
 .bank-note{display:flex;align-items:center;gap:6px;margin-top:14px;font-size:.72rem;color:rgba(255,255,255,.42);justify-content:center;text-align:center;}
@@ -136,9 +134,7 @@ a{color:inherit;text-decoration:none;}
 .footer-links a:hover{color:var(--cyan-soft);}
 .footer-links .sep{opacity:.3;}
 
-.float-reg{position:fixed;right:16px;bottom:20px;z-index:9900;padding:10px 16px;border-radius:999px;background:linear-gradient(135deg,var(--cyan-soft),var(--cyan));color:#04241f;font-family:'Poppins',sans-serif;font-weight:900;font-size:.78rem;letter-spacing:.05em;text-decoration:none;box-shadow:0 6px 22px rgba(45,217,210,.4);transition:transform .2s,box-shadow .2s;white-space:nowrap;}
-.float-reg:hover{transform:translateY(-2px);box-shadow:0 10px 28px rgba(45,217,210,.5);}
-#toTop{position:fixed;right:16px;bottom:72px;z-index:9900;width:40px;height:40px;border-radius:50%;background:rgba(10,20,36,.92);border:1px solid rgba(45,217,210,.3);color:var(--cyan);font-size:1.1rem;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 14px rgba(0,0,0,.35);transition:opacity .3s,transform .2s;opacity:0;pointer-events:none;backdrop-filter:blur(12px);}
+#toTop{position:fixed;right:16px;bottom:20px;z-index:9900;width:40px;height:40px;border-radius:50%;background:rgba(10,20,36,.92);border:1px solid rgba(45,217,210,.3);color:var(--cyan);font-size:1.1rem;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 14px rgba(0,0,0,.35);transition:opacity .3s,transform .2s;opacity:0;pointer-events:none;backdrop-filter:blur(12px);}
 #toTop.show{opacity:1;pointer-events:auto;}
 #toTop:hover{transform:translateY(-2px);}
 </style>
@@ -205,7 +201,6 @@ a{color:inherit;text-decoration:none;}
       <span>Pay Now — Vireon Premiere</span>
       <span class="arrow" aria-hidden="true">→</span>
     </a>
-    <a class="secondary-btn" href="/how-to-register.html">Read the registration guide first</a>
   </div>
 
   <p class="bank-note">
@@ -244,7 +239,6 @@ a{color:inherit;text-decoration:none;}
 
 </div>
 
-<a href="/register.html" class="float-reg" aria-label="Register for Vireon">+ Register</a>
 <button id="toTop" aria-label="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
 
 <script>
