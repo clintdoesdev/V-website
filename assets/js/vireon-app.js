@@ -91,6 +91,29 @@
       });
     }
 
+    // ---- quick signup form -> success overlay -> Telegram handoff ----
+    var quickSignup = document.getElementById('quickSignup');
+    var successOverlay = document.getElementById('successOverlay');
+    if (quickSignup) {
+      quickSignup.addEventListener('submit', function (e) {
+        e.preventDefault();
+        if (quickSignup.checkValidity && !quickSignup.checkValidity()) {
+          quickSignup.reportValidity();
+          return;
+        }
+        var submitBtn = quickSignup.querySelector('.form-submit');
+        if (submitBtn) { submitBtn.setAttribute('disabled', 'disabled'); }
+        if (successOverlay) {
+          successOverlay.classList.add('show');
+          successOverlay.setAttribute('aria-hidden', 'false');
+          document.body.style.overflow = 'hidden';
+        }
+        setTimeout(function () {
+          window.location.href = 'https://t.me/m/YpV0fIYFYzY8';
+        }, 1900);
+      });
+    }
+
     // ---- mobile nav drawer ----
     var menuBtn = document.querySelector('.menu-btn');
     var mobileNav = document.querySelector('.mobile-nav');
