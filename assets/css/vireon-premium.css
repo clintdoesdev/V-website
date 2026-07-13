@@ -262,9 +262,10 @@
   .ultimate-grid{ position:relative; z-index:1; display:grid; grid-template-columns:1fr 1fr; gap:54px; align-items:center; }
   .ultimate-copy h2{ font-size:32px; font-weight:750; letter-spacing:-0.02em; line-height:1.2; margin:10px 0 16px; }
   .ultimate-copy > p{ font-size:15px; line-height:1.7; color:var(--text-mid); margin-bottom:26px; max-width:380px; }
-  .ultimate-price{ display:flex; align-items:baseline; gap:10px; margin-bottom:28px; }
+  .ultimate-price{ display:flex; align-items:baseline; gap:10px; flex-wrap:wrap; margin-bottom:28px; }
   .ultimate-price .amt{ font-family:'Poppins',sans-serif; font-size:42px; font-weight:800; color:var(--text-hi); letter-spacing:-0.02em; }
   .ultimate-price .period{ font-size:13px; color:var(--text-low); }
+  .price-note{ display:inline-block; font-size:11.5px; font-weight:650; color:var(--gold); background:rgba(243,205,126,0.1); border:1px solid rgba(243,205,126,0.3); padding:3px 10px; border-radius:999px; white-space:nowrap; }
   .ultimate-list{ display:flex; flex-direction:column; gap:16px; }
   .ultimate-list li{ list-style:none; display:flex; align-items:center; gap:14px; font-size:14.5px; color:var(--text-hi); font-weight:500; }
   .ultimate-list .tick{ flex-shrink:0; width:24px; height:24px; border-radius:50%; display:flex; align-items:center; justify-content:center; background:linear-gradient(180deg, var(--gold), var(--gold-deep)); box-shadow:0 4px 12px -4px rgba(243,205,126,0.6); }
