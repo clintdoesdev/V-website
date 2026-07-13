@@ -90,7 +90,9 @@ a{color:inherit;text-decoration:none;}
 .card-flag{font-size:1.1rem;filter:drop-shadow(0 1px 2px rgba(0,0,0,.3));}
 .card-price-block{position:relative;margin-top:16px;z-index:1;}
 .card-price-tag{font-size:.68rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.40);margin-bottom:5px;}
+.card-price-row{display:flex;align-items:baseline;gap:9px;flex-wrap:wrap;}
 .card-price{font-family:'Poppins',sans-serif;font-size:clamp(2.4rem,8vw,3.2rem);font-weight:900;line-height:1;color:#fff;letter-spacing:-.03em;}
+.price-note{display:inline-block;font-size:.68rem;font-weight:650;color:var(--gold);background:rgba(243,205,126,.1);border:1px solid rgba(243,205,126,.3);padding:3px 9px;border-radius:999px;white-space:nowrap;}
 .card-price-sub{display:inline-block;margin-top:7px;font-size:.73rem;color:var(--w60);}
 .card-divider{position:relative;height:1px;margin:18px 0 16px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.08),transparent);z-index:1;}
 .card-meta{position:relative;display:flex;align-items:center;justify-content:space-between;gap:10px;z-index:1;}
@@ -157,7 +159,10 @@ a{color:inherit;text-decoration:none;}
       </div>
       <div class="card-price-block">
         <div class="card-price-tag">One-time registration fee</div>
-        <div class="card-price">₦14,500</div>
+        <div class="card-price-row">
+          <div class="card-price">₦14,500</div>
+          <span class="price-note">+₦500 for bank charges</span>
+        </div>
         <span class="card-price-sub">Pay once · Activate via Telegram</span>
       </div>
       <div class="bonus-tag" aria-label="What Vireon Premiere unlocks">
