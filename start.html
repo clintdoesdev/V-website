@@ -144,7 +144,9 @@ h1{font-family:'Poppins',sans-serif;font-size:clamp(1.9rem,7vw,2.6rem);font-weig
   if (ctaBtn && window.ttq) {
     ctaBtn.addEventListener('click', function(){
       var label = ctaBtn.querySelector('span:not(.arrow)');
-      ttq.track('ClickButton', { content_name: label ? label.textContent.trim() : ctaBtn.textContent.trim() });
+      var name = label ? label.textContent.trim() : ctaBtn.textContent.trim();
+      ttq.track('ClickButton', { content_name: name });
+      ttq.track('CompleteRegistration', { content_name: name });
     });
   }
 })();
