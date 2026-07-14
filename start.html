@@ -36,8 +36,9 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
 ;n.type="text/javascript",n.async=!0,n.src=r+"?sdkid="+e+"&lib="+t;e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(n,e)};
 
 
-  ttq.load('D9B2MLRC77U218UQ1FUG');
+  ttq.load('D9B3413C77U102660I9G');
   ttq.page();
+  ttq.track('ViewContent');
 }(window, document, 'ttq');
 </script>
 <!-- TikTok Pixel Code End -->
@@ -138,6 +139,14 @@ h1{font-family:'Poppins',sans-serif;font-size:clamp(1.9rem,7vw,2.6rem);font-weig
       window.location.href = DEST;
     }
   }, 1000);
+
+  var ctaBtn = document.getElementById('ctaBtn');
+  if (ctaBtn && window.ttq) {
+    ctaBtn.addEventListener('click', function(){
+      var label = ctaBtn.querySelector('span:not(.arrow)');
+      ttq.track('ClickButton', { content_name: label ? label.textContent.trim() : ctaBtn.textContent.trim() });
+    });
+  }
 })();
 </script>
 </body>
