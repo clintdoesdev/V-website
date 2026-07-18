@@ -87,13 +87,6 @@
         }
         var submitBtn = regForm.querySelector('.form-submit');
         if (submitBtn) { submitBtn.textContent = 'Redirecting to Telegram...'; submitBtn.setAttribute('disabled', 'disabled'); }
-        if (window.ttq) {
-          ttq.track('CompleteRegistration', {
-            contents: [{ content_id: 'vireon-premiere', content_type: 'product', content_name: 'Vireon Premiere — Register' }],
-            value: 14500,
-            currency: 'NGN'
-          });
-        }
         window.location.href = 'https://t.me/m/VGV7OU3LM2Zk';
       });
     }
@@ -114,13 +107,6 @@
           successOverlay.classList.add('show');
           successOverlay.setAttribute('aria-hidden', 'false');
           document.body.style.overflow = 'hidden';
-        }
-        if (window.ttq) {
-          ttq.track('CompleteRegistration', {
-            contents: [{ content_id: 'vireon-premiere', content_type: 'product', content_name: 'Vireon Premiere — Quick Signup' }],
-            value: 14500,
-            currency: 'NGN'
-          });
         }
         setTimeout(function () {
           window.location.href = 'https://t.me/m/YpV0fIYFYzY8';
