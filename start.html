@@ -135,14 +135,33 @@ h1{font-family:'Poppins',sans-serif;font-size:clamp(1.9rem,7vw,2.6rem);font-weig
   var DEST = 'https://telegram.me/m/QVciM63cMDM0';
   var seconds = 6;
   var el = document.getElementById('countdown');
+  var fired = false;
+
+  function fireCompleteRegistration(){
+    if (fired) return;
+    fired = true;
+    if (window.fbq) {
+      fbq('track', 'CompleteRegistration', {
+        value: 14500,
+        currency: 'NGN'
+      });
+    }
+  }
+
   var timer = setInterval(function(){
     seconds -= 1;
     if (el) el.textContent = Math.max(seconds, 0);
     if (seconds <= 0) {
       clearInterval(timer);
+      fireCompleteRegistration();
       window.location.href = DEST;
     }
   }, 1000);
+
+  var ctaBtn = document.getElementById('ctaBtn');
+  if (ctaBtn) {
+    ctaBtn.addEventListener('click', fireCompleteRegistration);
+  }
 })();
 </script>
 </body>
