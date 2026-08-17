@@ -133,6 +133,11 @@ a{color:inherit;text-decoration:none;}
 .main-btn:hover{transform:translateY(-1px);box-shadow:0 14px 32px -8px rgba(243,205,126,.50),inset 0 1px 0 rgba(255,255,255,.3);}
 .main-btn:active{transform:translateY(0);opacity:.95;}
 .main-btn .arrow{font-size:1rem;transition:transform .2s;}
+.receipt-btn{display:flex;align-items:center;justify-content:center;gap:9px;width:100%;padding:14px 20px;border-radius:14px;border:1.5px solid rgba(45,217,210,.4);background:rgba(45,217,210,.06);color:var(--cyan-soft);cursor:pointer;font-family:'Poppins',sans-serif;font-size:.86rem;font-weight:800;letter-spacing:.03em;transition:transform .2s,background .2s;-webkit-tap-highlight-color:transparent;text-decoration:none;}
+.receipt-btn:hover{transform:translateY(-1px);background:rgba(45,217,210,.12);}
+.receipt-btn:active{transform:translateY(0);}
+.receipt-btn .arrow{font-size:1rem;transition:transform .2s;}
+.receipt-btn:hover .arrow{transform:translateX(2px);}
 .main-btn:hover .arrow{transform:translateX(2px);}
 
 /* bank note */
@@ -231,6 +236,13 @@ a{color:inherit;text-decoration:none;}
     An additional ₦500 payment processing fee applies at checkout (₦15,000 total).
   </p>
 
+  <div class="cta-wrap">
+    <a class="receipt-btn" href="https://t.me/Vireonvendor" target="_blank" rel="noopener" aria-label="Send your payment receipt on Telegram">
+      <span>Send Payment Receipt</span>
+      <span class="arrow" aria-hidden="true">→</span>
+    </a>
+  </div>
+
   <div class="trust-row" aria-label="Trust indicators">
     <div class="trust-item">
       <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><circle cx="6.5" cy="6.5" r="5.5" stroke="currentColor" stroke-width="1.2"/><path d="M4 6.5l1.8 1.8L9 4.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -250,7 +262,7 @@ a{color:inherit;text-decoration:none;}
 
   <footer class="page-footer">
     <strong>vireonwebsite.com.ng</strong> · © 2026 Vireon. All rights reserved.<br>
-    After payment, send your proof to the official Telegram: <a href="https://t.me/m/VGV7OU3LM2Zk" target="_blank" rel="noopener">Vireon on Telegram</a><br>
+    After payment, send your proof to the official Telegram: <a href="https://t.me/Vireonvendor" target="_blank" rel="noopener">Vireon on Telegram</a><br>
     Keep your payment receipt. Only pay through the official checkout above — never to an unofficial account.
     <div class="footer-links">
       <a href="/index.html">Home</a><span class="sep">·</span>
