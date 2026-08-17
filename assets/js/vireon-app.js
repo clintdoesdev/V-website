@@ -91,7 +91,7 @@
       });
     }
 
-    // ---- quick signup form -> success overlay -> Telegram handoff ----
+    // ---- quick signup form -> success overlay -> WhatsApp handoff ----
     var quickSignup = document.getElementById('quickSignup');
     var successOverlay = document.getElementById('successOverlay');
     if (quickSignup) {
@@ -109,7 +109,7 @@
           document.body.style.overflow = 'hidden';
         }
         setTimeout(function () {
-          window.location.href = 'https://t.me/m/YpV0fIYFYzY8';
+          window.location.href = 'https://wa.link/jfagih';
         }, 1900);
       });
     }
