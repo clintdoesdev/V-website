@@ -76,7 +76,7 @@
       });
     });
 
-    // ---- registration form -> Telegram handoff ----
+    // ---- registration form -> WhatsApp handoff ----
     var regForm = document.getElementById('regForm');
     if (regForm) {
       regForm.addEventListener('submit', function (e) {
@@ -86,8 +86,8 @@
           return;
         }
         var submitBtn = regForm.querySelector('.form-submit');
-        if (submitBtn) { submitBtn.textContent = 'Redirecting to Telegram...'; submitBtn.setAttribute('disabled', 'disabled'); }
-        window.location.href = 'https://t.me/m/VGV7OU3LM2Zk';
+        if (submitBtn) { submitBtn.textContent = 'Redirecting to WhatsApp...'; submitBtn.setAttribute('disabled', 'disabled'); }
+        window.location.href = 'https://wa.link/jfagih';
       });
     }
 
