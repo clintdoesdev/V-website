@@ -76,7 +76,7 @@
       });
     });
 
-    // ---- registration form -> WhatsApp handoff ----
+    // ---- registration form -> Telegram handoff ----
     var regForm = document.getElementById('regForm');
     if (regForm) {
       regForm.addEventListener('submit', function (e) {
@@ -86,12 +86,12 @@
           return;
         }
         var submitBtn = regForm.querySelector('.form-submit');
-        if (submitBtn) { submitBtn.textContent = 'Redirecting to WhatsApp...'; submitBtn.setAttribute('disabled', 'disabled'); }
-        window.location.href = 'https://wa.link/jfagih';
+        if (submitBtn) { submitBtn.textContent = 'Redirecting to Telegram...'; submitBtn.setAttribute('disabled', 'disabled'); }
+        window.location.href = 'https://t.me/m/QVciM63cMDM0';
       });
     }
 
-    // ---- quick signup form -> success overlay -> WhatsApp handoff ----
+    // ---- quick signup form -> success overlay -> Telegram handoff ----
     var quickSignup = document.getElementById('quickSignup');
     var successOverlay = document.getElementById('successOverlay');
     if (quickSignup) {
@@ -109,7 +109,7 @@
           document.body.style.overflow = 'hidden';
         }
         setTimeout(function () {
-          window.location.href = 'https://wa.link/jfagih';
+          window.location.href = 'https://t.me/m/QVciM63cMDM0';
         }, 1900);
       });
     }
